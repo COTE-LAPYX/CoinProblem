@@ -176,17 +176,12 @@ public class Main {
         List<Coin> coinListTotal = new ArrayList<>(coins);
         Coin coinLeft;
         Coin coinRight;
-        Coin coinBuffer = null;
+        Coin coinBuffer;
 
         boolean foundFakeCoin = false;
         int weightTimes = 0;
 
         while (!foundFakeCoin) {
-
-            if ((coinListTotal.size() % 2) != 0) {
-                coinBuffer = coinListTotal.remove(0);
-            }
-
             coinLeft = coinListTotal.remove(0);
             coinRight = coinListTotal.remove(0);
 
@@ -202,8 +197,12 @@ public class Main {
                     }
                 }
                 case EQUALS -> {
-                    if (coinBuffer != null && coinBuffer.isFake()) {
-                        foundFakeCoin = true;
+                    if (coinListTotal.size() == 1){
+                        coinBuffer = coinListTotal.remove(0);
+
+                        if (coinBuffer != null && coinBuffer.isFake()) {
+                            foundFakeCoin = true;
+                        }
                     }
                 }
             }
