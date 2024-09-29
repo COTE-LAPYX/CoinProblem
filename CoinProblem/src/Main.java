@@ -27,9 +27,9 @@ public class Main {
         thirdSolution(coins);
 
         //RESULTS
-        System.out.println(firstSolution(coins)); // 71 - 1 = 70; 70 : 2 = 35; 35 - 1 = 34; 34 : 2 = 17; 17 - 1 = 16; 16 / 2 = 8; 8 : 2 = 4; 4 : 2 = 2; 2 : 2 = 1;  TOTAL = 6;
-        System.out.println(secondSolution(coins)); // 71 - 3 = 68; 68 / 2 = 34; 34 - 2 = 32; 32 / 2 = 16; 16 - 2 = 14; 14 / 2 = 7; 7 - 3 = 4; 4 / 2 = 2; 2 / 2; TOTAL = 5
-        System.out.println(thirdSolution(coins)); // 71 - 1 = 70; 70 - 2 = 68; 68 - 2 = 66; ... ; TOTAL = 35;
+        System.out.println(firstSolution(coins)); // 71 - 1 = 70; 70 / 2 = 35; 35 - 1 = 34; 34 / 2 = 17; 17 - 1 = 16; 16 / 2 = 8; 8 / 2 = 4; 4 / 2 = 2; 2 / 2 = 1;  TOTAL = 6;
+        System.out.println(secondSolution(coins)); // 71 - 3 = 68; 68 / 2 = 34; 34 - 2 = 32; 32 / 2 = 16; 16 - 2 = 14; 14 / 2 = 7; 7 - 3 = 4; 4 / 2 = 2; 2 / 2 = 1; TOTAL = 5
+        System.out.println(thirdSolution(coins)); // 71 - 2 = 69; 69 - 2 = 67; 67 - 2 = 65; ... ; 5 - 2 = 3; 3 - 2 = 1; TOTAL = 35;
 
         /*
         Conclusion:
@@ -197,7 +197,7 @@ public class Main {
                     }
                 }
                 case EQUALS -> {
-                    if (coinListTotal.size() == 1){
+                    if (coinListTotal.size() == 1) {
                         coinBuffer = coinListTotal.remove(0);
 
                         if (coinBuffer != null && coinBuffer.isFake()) {
