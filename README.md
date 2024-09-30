@@ -36,7 +36,7 @@ For small calculations, the best algorithm in terms of time is **the third**, it
 
 **The first** algorithm uses *6 weighings*, and will be slightly faster than the third, but almost 3 times slower than the third algorithm.
 
-**The second** algorithm will be the longest of the proposed ones, slightly longer than the second. but it will require only *5 weighings*.
+**The second** algorithm will be the longest of the proposed ones, slightly longer than the first. but it will require only *5 weighings*.
 
 ### In the case of an example of *10,000 coins*:
 
